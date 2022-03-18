@@ -18,19 +18,19 @@ public class ExceptionGlobalResponse {
 
 	@ExceptionHandler(RuntimeException.class)
 	public ResponseEntity<Response> runtimeException(RuntimeException e) {
-		result = new Response(new Date(), "[Exception Response] - Exception: " + e.getMessage(), 500, "Error KETO");
+		result = new Response(new Date(), "[Exception Response] - Exception: " + e.getMessage(), 500, "Error in request Bci Demo");
 		return new ResponseEntity<>(result, HttpStatus.INTERNAL_SERVER_ERROR);
 	}
 
 	@ExceptionHandler(Exception.class)
 	public ResponseEntity<Response> exception(Exception e) {
-		result = new Response(new Date(), "[Exception Response] - Exception: " + e.getMessage(), 500, "Error KE ");
+		result = new Response(new Date(), "[Exception Response] - Exception: " + e.getMessage(), 500, "Error in request Bci Demo");
 		return new ResponseEntity<>(result, HttpStatus.INTERNAL_SERVER_ERROR);
 	}
 
 	@ExceptionHandler(NotFoundException.class)
 	public ResponseEntity<Response> notFoundException(NotFoundException e) {
-		result = new Response(new Date(), "[Exception Response] - Exception: " + e.getMessage(), 404, "Error K");
+		result = new Response(new Date(), "[Exception Response] - Exception: " + e.getMessage(), 404, "Error in request Bci Demo");
 		return new ResponseEntity<>(result, HttpStatus.NOT_FOUND);
 	}
 
